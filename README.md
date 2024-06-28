@@ -1,6 +1,11 @@
 # Audio-to-Voice-Dataset
 
-This repository contains a Python script that processes an input WAV audio file by using OpenAI's Whisper model to transcribe the speech into text, splits the audio into individual sentences based on silent breaks, and creates a dataset in the LJ Speech format. **All processing is done locally without sending your audio data to the cloud!** This LJ Speech based voice dataset can be used to create a voice clone using tools like Piper or Coqui TTS.
+One frequently asked question on my "Thorsten-Voice" youtube channel comments is:
+> Does a voice processing pipeline exist that creates a voice dataset structure ready for voice cloning?
+
+And now, the answer is **yes!**
+ 
+This repository contains a Python script (`create_ljspeech.py`) that processes an input WAV audio file by using OpenAI's Whisper model to transcribe the speech into text, splits the audio into individual sentences based on silent breaks, and creates a dataset in the LJ Speech format. **All processing is done locally without sending your audio data to the cloud!** This LJ Speech based voice dataset can be used to create a voice clone using tools like Piper or Coqui TTS.
 
 ## Features
 
@@ -26,6 +31,7 @@ pip install openai-whisper pydub pandas
 ## Usage
 * Prepare your audio file: Place your input WAV file in a directory and note its path.
 * Update the script: Modify the audio_path variable in the script to point to your input WAV file.
+* Adjust values for `min_silence_len` and `keep_silence` for your personal wave recording (speed and breaks between sentences).
 * Run the script: Execute the script. It will process the audio file, split it into sentences, and save each sentence as a separate WAV file in the audio directory within the output directory. It will also create a metadata.csv file in the output directory containing the sentences and corresponding audio file IDs.
 
 ## Output
@@ -55,6 +61,9 @@ LJ0003|How are you?
 ## Notes
 * The Whisper model transcription process may take some time, especially for longer audio files.
 * For best results, ensure the input audio file has clear speech with minimal background noise.
+
+## Demo
+I added a german and english demo wave audio and it's created output in the `test-data` directory. As you can see it must be checked and adjusted after creation, but it should be a valid start for your voice cloning journey.
 
 ## What's next?
 Use this voice dataset to create a human like sounding voice clone **locally** using tools like Piper or Coqui TTS. Please check my step by step tutorial videos on my "Thorsten-Voice" youtube channel and subscribe if you like open source voice technology - Thank you :).
