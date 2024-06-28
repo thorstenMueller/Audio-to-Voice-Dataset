@@ -1,7 +1,7 @@
 # Audio-to-Voice-Dataset
 
-One frequently asked question on my "Thorsten-Voice" youtube channel comments is:
-> Does a voice processing pipeline exist that creates a voice dataset structure ready for voice cloning?
+One frequently asked community question on my "[Thorsten-Voice](https://youtube.com/@ThorstenMueller/)" youtube channel is:
+> Does a voice processing pipeline exist that creates a voice dataset structure ready for voice cloning based on existing wave audio data?
 
 And now, the answer is **yes!**
  
