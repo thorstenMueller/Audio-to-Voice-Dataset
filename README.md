@@ -10,7 +10,7 @@ This repository contains a Python script (`create_ljspeech.py`) that processes a
 ## Features
 
 - Transcribes speech to text using OpenAI's Whisper model.
-- Splits audio into sentences based on longer silent breaks.
+- Splits multiple audio files (in one directory) into sentences based on longer silent breaks.
 - Saves each sentence as a separate WAV file.
 - Generates a metadata CSV file mapping each sentence to its corresponding audio file.
 
