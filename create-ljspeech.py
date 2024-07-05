@@ -58,7 +58,8 @@ for wav_file in wav_files:
         
         metadata.append({
             "ID": sentence_id,
-            "text": text
+            "text": text,
+            "textCleaned": text.lower() # TODO: Add textcleaner library (multilanguage support)
         })
 
         # Remove temporary chunk file
